@@ -1,0 +1,512 @@
+/* VARIABLES DE COLOR */
+
+:root {
+    --background-color: #171329;
+    --primary-color: #FF38B8;
+    --secondary-color: #00E5FF;
+    --tertiary-color: #873CFF;
+    --accent-color: #FFE45C;
+    --text-color: #F5F0FF;
+
+    --font-main: 'Raleway', sans-serif;
+    --font-pixel: 'Press Start 2P', cursive;
+}
+
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ENCABEZADO */
+
+header {
+    background-color: var(--tertiary-color);
+    padding: 25px;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+header h1 {
+    font-family: var(--font-pixel);
+    font-size: 20px;
+    color: var(--accent-color);
+    margin-bottom: 25px;
+    text-shadow: 3px 3px var(--primary-color);
+}
+
+
+/* MENÚ DE NAVEGACIÓN */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--background-color);
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    box-shadow: 4px 4px var(--accent-color);
+}
+/* ENCABEZADO RETRO */
+.site-header {
+    background-color: var(--tertiary-color);
+    padding: 35px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.header-label {
+    color: var(--secondary-color);
+    font-family: var(--font-pixel);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.site-header h1 {
+    font-family: var(--font-pixel);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.header-subtitle {
+    font-family: var(--font-pixel);
+    font-size: 20px;
+    font-style: bold;
+    color: var(--accent-color);
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+    
+
+}
+
+/* BIENVENIDA */
+
+.project-section {
+    background-color: #29213F;
+    border: 3px solid var(--secondary-color);
+    padding: 30px;
+    margin-bottom: 50px;
+    box-shadow: 8px 8px var(--tertiary-color);
+}
+
+.project-label {
+    color: var(--primary-color);
+    font-family: var(--font-pixel);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.project-section h2 {
+    color: var(--accent-color);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.project-section p {
+    max-width: 750px;
+}
+
+.project-signature {
+    color: var(--secondary-color);
+    font-weight: bold italic;
+    font-size: 40px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+main {
+    width: 92%;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    font-family: var(--font-pixel);
+    font-size: 25px;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+
+/* PROYECTOS */
+/* esta sección me ha dado dolor de cabeaza, pero al final lo logré. */
+.projects-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projects-section h2 {
+    grid-column: 1 / -1;
+}
+
+section:nth-of-type(2) h2 {
+    grid-column: 1 / -1;
+}
+
+article {
+    background-color: #29213F;
+    border: 3px solid var(--primary-color);
+    padding: 12px;
+    box-shadow: 6px 6px var(--tertiary-color);
+    transition: 0.3s;
+    align-self: start;
+}
+
+
+article:hover {
+    transform: translateY(-6px);
+    box-shadow: 8px 8px var(--secondary-color);
+}
+
+figure img {
+    width: 100%;
+    display: block;
+    border: 2px solid var(--secondary-color);
+}
+
+figcaption {
+    text-align: center;
+    padding: 12px 5px;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* PÁGINA DE CONTACTO */
+/* FORMULARIO DE CONTACTO SE CREA MEJOR CON WYSIWYG PORQUE NO PRODUCE LÁGRMAS */
+
+.contact-form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  
+
+  font-family: inherit; 
+  background-color: var(--background-color, #ffffff); 
+  
+
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: inherit; 
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: inherit;
+  opacity: 0.8; 
+}
+
+/* CAMPOS DE TEXTO */
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-family: inherit; 
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: transparent;
+  color: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color, #007BFF); 
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+
+.btn-submit {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  
+ 
+  background-color: var(--primary-color, #007BFF); 
+  color: var(--button-text-color, #ffffff);
+}
+
+.btn-submit:hover {
+  opacity: 0.9; 
+}
+
+
+/* PIE DE PÁGINA */
+
+.main-footer {
+    background-color: var(--tertiary-color);
+    border-top: 4px solid var(--secondary-color);
+    text-align: center;
+    padding: 25px;
+}
+
+hr {
+    border: none;
+}
+
+/* =================================
+   PÁGINA DE CONTACTO
+================================= */
+
+/* ENCABEZADO Y NAVEGACIÓN */
+
+.site-header {
+    background-color: var(--tertiary-color);
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.logo {
+    font-family: var(--font-pixel);
+    font-size: 20px;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.navbar {
+    margin-top: 25px;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+/* BANNER DE CONTACTO */
+
+.banner-header {
+    background-color: #29213F;
+    border-bottom: 3px solid var(--primary-color);
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.banner-header-text {
+    max-width: 800px;
+    margin: auto;
+}
+
+.banner-header .intro-label {
+    color: var(--secondary-color);
+    font-family: var(--font-pixel);
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.banner-title {
+    font-family: var(--font-pixel);
+    font-size: 25px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.banner-header p {
+    margin-bottom: 25px;
+}
+
+/* BOTONES */
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: 2px solid var(--secondary-color);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 5px 5px var(--accent-color);
+}
+
+/* SECCIONES */
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    color: var(--accent-color);
+    font-family: var(--font-pixel);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* TARJETAS DE INFORMACIÓN */
+
+.card-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-info article {
+    text-align: center;
+    min-width: 0;
+}
+
+.card-info i {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card-info h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+/* CONTENEDOR FORMULARIO */
+
+.contact-form-container {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+}
+
+/* FORMULARIO */
+
+.box-form {
+   width: 100%;
+   max-width: none;
+   background-color: #29213F;
+   border: 3px solid var(--primary-color);
+   padding: 35px;
+    box-shadow: 6px 6px var(--tertiary-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.input-form,
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 2px solid var(--tertiary-color);
+    font-family: var(--font-main);
+    font-size: 15px;
+}
+
+.input-form:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px var(--secondary-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* PIE DE PÁGINA */
+
+.main-footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.main-footer a:hover {
+    color: var(--accent-color);
+}
+
