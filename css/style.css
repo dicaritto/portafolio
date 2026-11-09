@@ -509,4 +509,22 @@ hr {
 .main-footer a:hover {
     color: var(--accent-color);
 }
+/*  CORRECCIÓN DE BOTONES DE REDES SOCIALES */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
 
+.social-icons a {
+    color: var(--secondary-color);
+    font-size: 32px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+    transform: scale(1.2);
+}
